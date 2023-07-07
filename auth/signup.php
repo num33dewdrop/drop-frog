@@ -50,7 +50,7 @@ if ( ! empty( $_POST ) ) {
 						// ユーザーIDを格納
 						$_SESSION['user_id'] = $dbh->lastInsertId();
 						debug( 'セッション変数の中身：' . print_r( $_SESSION, true ) );
-                        $_SESSION['msg_success'] = SUC_06;
+						$_SESSION['msg_success'] = SUC_06;
 						header( "Location:" . MY_PAGE );//マイページへ
 						exit();
 					}

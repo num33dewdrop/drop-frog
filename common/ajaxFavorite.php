@@ -29,9 +29,10 @@ if ( isset( $_POST['p_id'] ) && isset( $_SESSION['user_id'] ) && isLogin() ) {
 		} else {
 			// レコードを挿入する
 			$sql1  = 'INSERT INTO favorite (product_id, customer_user_id, create_date) VALUES (:p_id, :u_id, :create_date)';
-			$data1 = array( ':p_id'        => $p_id,
-			                ':u_id'        => $_SESSION['user_id'],
-			                ':create_date' => date( 'Y-m-d H:i:s' )
+			$data1 = array(
+				':p_id'        => $p_id,
+				':u_id'        => $_SESSION['user_id'],
+				':create_date' => date( 'Y-m-d H:i:s' )
 			);
 			// お知らせに情報を挿入
 			$sql2  = 'INSERT INTO p_notice (product_id, customer_user_id, notice_type, create_date) VALUES (:p_id, :u_id, :notice_type, :create_date)';

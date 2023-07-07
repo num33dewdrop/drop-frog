@@ -45,30 +45,31 @@ require HEADER;
                             作品 掲載中
                         </div>
                         <div class="c-flex c-flex--spaceAro">
-	                        <?php if ( ! empty( $twitter ) ) { ?>
+							<?php if ( ! empty( $twitter ) ) { ?>
                                 <div class="c-user__info">
                                     <p class="c-user__label">Twitter</p>
                                     <a href="https://twitter.com/<?php echo sanitize( $twitter ); ?>" target="_blank">
                                         <i class="fa-brands fa-square-twitter"></i>
                                     </a>
                                 </div>
-	                        <?php } ?>
-	                        <?php if ( ! empty( $userInfo['git_hub'] ) ) { ?>
+							<?php } ?>
+							<?php if ( ! empty( $userInfo['git_hub'] ) ) { ?>
                                 <div class="c-user__info">
                                     <p class="c-user__label">GitHub</p>
-                                    <a href="https://github.com/<?php echo sanitize( $userInfo['git_hub'] ); ?>/" target="_blank">
+                                    <a href="https://github.com/<?php echo sanitize( $userInfo['git_hub'] ); ?>/"
+                                       target="_blank">
                                         <i class="fa-brands fa-github"></i>
                                     </a>
                                 </div>
-	                        <?php } ?>
-	                        <?php if ( ! empty( $userInfo['blog'] ) ) { ?>
+							<?php } ?>
+							<?php if ( ! empty( $userInfo['blog'] ) ) { ?>
                                 <div class="c-user__info">
                                     <p class="c-user__label">Blog</p>
                                     <a href="<?php echo sanitize( $userInfo['blog'] ); ?>" target="_blank">
                                         <i class="fa-sharp fa-solid fa-blog"></i>
                                     </a>
                                 </div>
-	                        <?php } ?>
+							<?php } ?>
                         </div>
                     </div>
                 </div>

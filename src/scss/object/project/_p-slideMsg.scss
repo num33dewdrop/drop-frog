@@ -13,6 +13,7 @@
   @include mq() {
     top: 96px;
   }
+
   &--err {
     background: rgba(255, 214, 214, 0.6);
   }

@@ -100,7 +100,7 @@ if ( ! empty( $_POST['register'] ) ) {
 			//公開設定がONなら公開日を代入
 			$public_date = $public_flg ? date( 'Y-m-d H:i:s' ) : null;
 			try {
-				$dbh = dbConnect();
+				$dbh  = dbConnect();
 				$data = array(
 					':name'        => $name,
 					':category_id' => $category_id,
@@ -111,7 +111,7 @@ if ( ! empty( $_POST['register'] ) ) {
 					':pic4'        => $pic4,
 					':pic5'        => $pic5,
 					':url'         => $url,
-					':git_hub'      => $git_hub,
+					':git_hub'     => $git_hub,
 					':user_id'     => $_SESSION['user_id'],
 					':public_flg'  => $public_flg,
 					':public_date' => $public_date
@@ -124,7 +124,7 @@ if ( ! empty( $_POST['register'] ) ) {
 					$sql  = 'UPDATE product SET name = :name, category_id = :category_id, detail = :detail, pic1 = :pic1,  pic2 = :pic2, pic3 = :pic3, pic4 = :pic4, pic5 = :pic5,
                                                url = :url, git_hub = :git_hub, public_flg = :public_flg, public_date = :public_date
                             WHERE id = :p_id AND user_id = :user_id AND delete_flg = 0';
-                    $data = array_merge( $data, array( ':p_id' => $p_id ) );
+					$data = array_merge( $data, array( ':p_id' => $p_id ) );
 				}
 				debug( '流し込みデータ：' . print_r( $data, true ) );
 				$stmt = queryPost( $dbh, $sql, $data );
@@ -246,7 +246,8 @@ require HEADER;
                                 <input type="text" id="git_hub" class="c-editForm__input" name="git_hub"
                                        value="<?php echo getDataAndHold( 'git_hub' ); ?>" placeholder="example-name">
                                 <p class="c-editForm__caution c-editForm__caution--left">※『リポジトリ名』のみ入力して下さい。</p>
-                                <p class="c-editForm__caution c-editForm__caution--left">※『リポジトリ名』登録前に、プロフィール編集にてGitHubアカウントを登録して下さい。</p>
+                                <p class="c-editForm__caution c-editForm__caution--left">
+                                    ※『リポジトリ名』登録前に、プロフィール編集にてGitHubアカウントを登録して下さい。</p>
                             </div>
                             <div class="c-editForm__inputContainer c-editForm__inputContainer--half">
                                 <span class="label">公開設定</span>

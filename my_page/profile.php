@@ -30,13 +30,13 @@ if ( ! empty( $_POST ) ) {
 	$git_hub      = getMethodHold( 'git_hub' );
 
 	//DBの情報と入力情報が異なる場合にバリデーションを行う
-    //最大文字数
+	//最大文字数
 	diffDb( $nick_name, 'nick_name', Closure::fromCallable( 'validMaxLen' ) );
 	diffDb( $introduction, 'introduction', Closure::fromCallable( 'validMaxLen' ), 500 );
 	diffDb( $twitter, 'twitter', Closure::fromCallable( 'validMaxLen' ) );
 	diffDb( $blog, 'blog', Closure::fromCallable( 'validMaxLen' ) );
 	diffDb( $git_hub, 'git_hub', Closure::fromCallable( 'validMaxLen' ) );
-    //形式
+	//形式
 	diffDb( $twitter, 'twitter', Closure::fromCallable( 'validTwitter' ) );
 	diffDb( $blog, 'blog', Closure::fromCallable( 'validUrl' ) );
 
@@ -58,11 +58,13 @@ if ( ! empty( $_POST ) ) {
 			if ( dbAffect( $stmt ) ) {
 				$_SESSION['msg_success'] = SUC_02;
 
-				if( empty( $git_hub ) && ! empty( $dbFormData['git_hub'] ) ) {
-                    $sql = 'UPDATE product SET git_hub = null  WHERE user_id = :u_id';
-                    $data = array( ':u_id' => $dbFormData['id'] );
+				if ( empty( $git_hub ) && ! empty( $dbFormData['git_hub'] ) ) {
+					$sql  = 'UPDATE product SET git_hub = null  WHERE user_id = :u_id';
+					$data = array( ':u_id' => $dbFormData['id'] );
 					$stmt = queryPost( $dbh, $sql, $data );
-					if( ! dbAffect( $stmt ) ) exit();
+					if ( ! dbAffect( $stmt ) ) {
+						exit();
+					}
 				}
 
 				debug( 'マイページへ遷移します。' );

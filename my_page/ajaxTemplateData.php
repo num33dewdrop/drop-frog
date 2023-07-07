@@ -78,10 +78,11 @@ if ( ! empty( $_POST ) && isset( $_SESSION['user_id'] ) && isLogin() ) {
 			//いいねフラグ
 			$favorite_flg = isLike( $_SESSION['user_id'], $val['p_id'] );
 			//レンダリング用のデータをマージ
-			$val = array_merge( $val, array( 'msgNum'       => $msgNum,
-			                                 'hashId'       => $hashId,
-			                                 'favoriteNum'  => $favoriteNum,
-			                                 'favorite_flg' => $favorite_flg
+			$val = array_merge( $val, array(
+				'msgNum'       => $msgNum,
+				'hashId'       => $hashId,
+				'favoriteNum'  => $favoriteNum,
+				'favorite_flg' => $favorite_flg
 			) );
 			//レンダリングしないデータを排除
 			unset( $val['user_id'], $val['hash'] );

@@ -141,13 +141,14 @@ require HEADER;
                     <div class="p-product__info">
                         <span class="p-product__label">GitHub</span>
                         <p>
-			                <?php if ( ! empty( $viewData['repository'] ) ) { ?>
-                                <a href="https://github.com/<?php echo sanitize( $viewData['git_name'] ).'/'.sanitize( $viewData['repository'] ).'/'; ?>" target="_blank">
-					                <?php echo sanitize( $viewData['repository'] ); ?>
+							<?php if ( ! empty( $viewData['repository'] ) ) { ?>
+                                <a href="https://github.com/<?php echo sanitize( $viewData['git_name'] ) . '/' . sanitize( $viewData['repository'] ) . '/'; ?>"
+                                   target="_blank">
+									<?php echo sanitize( $viewData['repository'] ); ?>
                                 </a>
-			                <?php } else { ?>
+							<?php } else { ?>
                                 GitHubの登録はありません
-			                <?php } ?>
+							<?php } ?>
                         </p>
                     </div>
                     <form action="" method="post" class="u-marginB-l">

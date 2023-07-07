@@ -14,7 +14,7 @@ $dbFavProductData = getProductListAndFavNum();
 $dbNewProductData = getProductList( null, 0, 0, null, 5 );
 $dbCategoryData   = getProductCategory();
 $dbNewsData       = getNews();
-debug('カテゴリー：'.print_r($dbCategoryData, true));
+debug( 'カテゴリー：' . print_r( $dbCategoryData, true ) );
 debug( '画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<' );
 require HEAD;
 require HEADER;

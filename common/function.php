@@ -209,7 +209,7 @@ function validUrl( $str, $key ) {
 	}
 }
 
-function validGitHub( $str , $key, $u_id ) {
+function validGitHub( $str, $key, $u_id ) {
 	if ( $str !== '' ) {
 		global $err_msg;
 		try {
@@ -223,9 +223,9 @@ function validGitHub( $str , $key, $u_id ) {
 			//クエリ結果の値を取得
 			$result = $stmt->fetch( PDO::FETCH_ASSOC );
 			if ( empty( array_shift( $result ) ) ) {
-				debug('$result:'.print_r($result, true));
-				debug('$result:'.print_r(array_shift( $result ), true));
-				$err_msg[$key] = MSG_20;
+				debug( '$result:' . print_r( $result, true ) );
+				debug( '$result:' . print_r( array_shift( $result ), true ) );
+				$err_msg[ $key ] = MSG_20;
 			}
 		} catch ( PDOException $e ) {
 			error_log( 'エラー発生：' . $e->getMessage() );
