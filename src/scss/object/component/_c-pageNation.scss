@@ -1,0 +1,33 @@
+.c-pageNation {
+  width: fit-content;
+  padding: $space_l 0 0;
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin: 0 $space_s;
+
+    &--nav {
+      @include mq() {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: $space_s $space_m;
+    color: $font-color_sub;
+    background: $bgColor_sub;
+    border: .5px solid $border-color_default;
+    border-radius: 3px;
+
+    &--active {
+      border: .5px solid $color_sub;
+      color: $color_sub;
+    }
+  }
+}

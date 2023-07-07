@@ -1,0 +1,189 @@
+.c-contents {
+  &--none {
+    line-height: 100px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+
+    &--center {
+      justify-content: center;
+    }
+
+    &--wrap {
+      flex-wrap: wrap;
+
+      &.c-contents__list--col3 {
+        margin-right: -$space_vw;
+        @include mq($breakpoint: md) {
+          margin-right: -$space_vw/2;
+          justify-content: inherit;
+        }
+        @include mq() {
+          margin-right: -$space_vw/2;
+          justify-content: inherit;
+        }
+      }
+
+      &.c-contents__list--col5 {
+        margin-right: -$space_vw/2;
+        @include mq($breakpoint: md) {
+          justify-content: inherit;
+        }
+        @include mq() {
+          justify-content: inherit;
+        }
+      }
+
+      & .c-contents__item--col3 {
+        width: calc(100% / 3 - #{$space_vw});
+        margin-bottom: $space_vw;
+        @include mq($breakpoint: md) {
+          width: calc(100% / 2 - #{$space_vw/2});
+          margin-right: $space_vw/2;
+          margin-bottom: $space_vw/2;
+        }
+        @include mq() {
+          width: calc(100% / 2 - #{$space_vw/2});
+          margin-right: $space_vw/2;
+          margin-bottom: $space_vw/2;
+        }
+      }
+
+      & .c-contents__item--col5 {
+        width: calc(100% / 5 - #{$space_vw/2});
+        margin-bottom: $space_vw/2;
+        @include mq() {
+          width: calc(100% / 2 - #{$space_vw/2});
+        }
+      }
+    }
+
+    &--spScroll {
+      @include mq() {
+        justify-content: inherit;
+        overflow-x: scroll;
+        & .c-contents__item {
+          width: calc(90% / 2 - #{$space_vw/2});
+          margin: 0 auto;
+
+          &Container {
+            margin-right: $space_vw/2;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+
+    &Container {
+      display: block;
+      background: #fff;
+      border: 0.5px solid #caddca;
+      border-radius: 3px;
+      transition: opacity .3s ease;
+      @include hv() {
+        &:hover {
+          opacity: .8;
+          transition: opacity .3s ease;
+        }
+      }
+      @include hv($hover: no) {
+        &:active {
+          opacity: .8;
+          transition: opacity .3s ease;
+        }
+      }
+
+      &--noHover {
+        &:hover {
+          opacity: inherit;
+        }
+      }
+    }
+
+    &--col3 {
+      width: calc(100% / 3 - #{$space_vw} + #{$space_vw} / 3);
+      margin-right: $space_vw;
+      @include mq() {
+        width: 100%;
+      }
+    }
+
+    &--col5 {
+      width: calc(100% / 5 - #{$space_vw/2} + #{$space_vw/2} / 5);
+      margin-right: $space_vw/2;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__body {
+    padding: $space_m;
+    border-top: .5px solid $border-color_default;
+    font-size: $font-size_s;
+  }
+
+  &__name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__info {
+    margin-bottom: $space_s;
+    padding: $space_s 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-bottom: 1px dashed $border-color_default;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-weight: bold;
+  }
+
+  &__icon {
+    width: 2vw;
+    @include mq() {
+      width: 5vw;
+    }
+  }
+
+  &__favorite {
+    @include hv() {
+      &:hover {
+        color: $color_sub;
+      }
+    }
+    @include hv($hover: no) {
+      &:active {
+        color: $color_sub;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.c-check {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__box {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    margin-right: $space_s;
+
+    & + label {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      transition: all .3s ease;
+      cursor: pointer;
+      width: 20px;
+      border: .5px solid $border-color_default;
+      height: 20px;
+    }
+
+    &:checked + label {
+      transition: all .3s ease;
+      display: inline-block;
+      width: 18px;
+      height: 15px;
+      border-bottom: 2px solid $color_sub;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      transform: rotate(-50deg) translate(50%, -50%);
+    }
+
+    &:checked + label:before {
+      content: "";
+      position: absolute;
+      right: 2px;
+      bottom: -2px;
+      height: 12px;
+      width: 100%;
+      border-left: 2px solid $color_sub;
+    }
+  }
+}

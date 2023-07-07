@@ -1,0 +1,19 @@
+.p-slideMsg {
+  display: none;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  background: rgba(214, 219, 255, 0.6);
+  text-align: center;
+  line-height: 40px;
+  z-index: 9;
+  @include mq($breakpoint: md) {
+    top: 96px;
+  }
+  @include mq() {
+    top: 96px;
+  }
+  &--err {
+    background: rgba(255, 214, 214, 0.6);
+  }
+}

@@ -1,0 +1,144 @@
+.c-fixedPage {
+  padding: $space_l;
+  background: #fff;
+  width: 60%;
+  margin: 0 auto;
+  @include mq($breakpoint: md) {
+    width: 100%;
+  }
+  @include mq() {
+    width: 100%;
+  }
+
+  &__img {
+    margin-bottom: $space_l;
+
+    &--col2 {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    font-family: $font-family_corp;
+    font-weight: bold;
+
+    &--main {
+      padding: $space_m;
+      color: $color-corp;
+      font-size: $font-size_l;
+      margin-bottom: $space_l;
+      border-left: 15px solid $border-color_default;
+      background: rgba(203, 202, 221, 0.69);
+      @include mq() {
+        font-size: $font-size_m;
+      }
+    }
+
+    &--sub {
+      padding: $space_m;
+      border-bottom: 3px dashed $border-color_default;
+      border-top: 3px dashed $border-color_default;
+      margin-bottom: $space_l;
+    }
+
+    &--thr {
+      font-size: $font-size_s;
+      padding: $space_s 0;
+      margin-bottom: $space_s;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 7.5px;
+        background: $color-sub;
+        margin-right: $space_s;
+      }
+    }
+  }
+
+  &__col2 {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__text {
+    font-size: $font-size_s;
+    margin-bottom: $space_l;
+
+    &--col2 {
+      margin-right: $space_m;
+      width: 50%;
+    }
+  }
+
+  &__link {
+    text-align: center;
+    display: block;
+    padding: $space_m 0;
+    width: 50%;
+    margin: 0 auto $space_l;
+    background: $bgColor_btn;
+    border-radius: 3px;
+    transition: all .3s ease;
+    color: $font-color_sub;
+    @include hv() {
+      &:hover {
+        transition: all .3s ease;
+        box-shadow: 1px 1px 5px #aaa;
+        background: $bgColor_btn--act;
+        color: $font-color_sub;
+      }
+    }
+    @include hv($hover: no) {
+      &:active {
+        transition: all .3s ease;
+        box-shadow: 1px 1px 5px #aaa;
+        background: $bgColor_btn--act;
+        color: $font-color_sub;
+      }
+    }
+  }
+
+  &__table {
+    font-size: $font-size_s;
+    width: 100%;
+
+    & th, td {
+      padding: $space_m 0 $space_s;
+      border-bottom: 1px dashed $border-color_default;
+    }
+
+    & th {
+      vertical-align: middle;
+      @include mq() {
+        width: 25%;
+      }
+    }
+
+    & td {
+      padding-left: $space_m;
+    }
+  }
+
+  &__input {
+    height: 3em;
+    width: 100%;
+    margin-bottom: $space_l;
+    background: $bgColor_default;
+    border-radius: 3px;
+    border: .5px solid $border-color_default;
+  }
+
+  &__area {
+    height: 15em;
+    padding: $space_m;
+  }
+
+  & label {
+    font-size: $font-size_s;
+  }
+}

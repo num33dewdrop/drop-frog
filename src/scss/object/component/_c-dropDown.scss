@@ -1,0 +1,47 @@
+.c-dropDown {
+  position: relative;
+  margin-right: -$space_m;
+
+  &__current {
+    letter-spacing: .1em;
+    padding: 0 $space_l;
+  }
+
+  &__list {
+    font-size: $font-size_s;
+    display: none;
+    position: absolute;
+    padding: $space_m 0;
+    background: #ffffff;
+    border-radius: 3px;
+    border: 0.5px solid #caddca;
+    top: 30px;
+    right: 0;
+    width: max-content;
+    z-index: 1;
+  }
+
+  &__item {
+    margin-bottom: $space_m;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    padding: 0 $space_l;
+    height: 3em;
+    letter-spacing: .1em;
+    @include hv() {
+      &:hover {
+        color: $font-color_accent;
+      }
+    }
+    @include hv($hover: no) {
+      &:active {
+        color: $font-color_accent;
+      }
+    }
+  }
+}

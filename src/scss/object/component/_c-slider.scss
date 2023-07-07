@@ -1,0 +1,60 @@
+.c-slider {
+  &__wrap {
+    position: relative;
+  }
+
+  &__nav {
+    padding: $space_m;
+    color: $color_corp;
+    position: absolute;
+    font-size: $font-size_l;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color .3s ease;
+    z-index: 1;
+    @include hv() {
+      &:hover {
+        cursor: pointer;
+        transition: color .3s ease;
+        color: $color_sub;
+      }
+    }
+    @include hv($hover: no) {
+      &:active {
+        transition: color .3s ease;
+        color: $color_sub;
+      }
+    }
+    @include mq() {
+      padding: $space_s;
+    }
+
+    &--prev {
+      left: -$space_xl;
+      @include mq($breakpoint: md) {
+        left: -$space_l;
+      }
+      @include mq() {
+        left: -20px;
+      }
+    }
+
+    &--next {
+      right: -61px;
+      @include mq($breakpoint: md) {
+        right: -31px;
+      }
+      @include mq() {
+        right: -21px;
+      }
+    }
+  }
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__list {
+    position: relative;
+  }
+}

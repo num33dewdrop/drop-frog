@@ -1,0 +1,89 @@
+.l-header {
+  width: 100%;
+  height: 80px;
+  background: $bgColor_sub;
+  display: flex;
+  align-items: center;
+  padding: 0 6vw;
+  border-bottom: 1px solid $border-color_default;
+  position: fixed;
+  z-index: 3;
+  @include mq($breakpoint: md) {
+    height: 60px;
+  }
+  @include mq() {
+    height: 60px;
+  }
+
+  &__logo {
+    color: $font-color_sub;
+    font-size: $font-size_l;
+    font-family: $font-family_logo;
+  }
+
+  &__search {
+    margin-left: $space_l;
+    width: 50%;
+    @include mq($breakpoint: md) {
+      position: absolute;
+      margin-left: 0;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      border: 1px solid $border-color_default;
+    }
+    @include mq() {
+      position: absolute;
+      margin-left: 0;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      border: 1px solid $border-color_default;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    margin-right: -$space_m;
+    @include mq() {
+      margin-right: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    @include mq() {
+      display: block;
+    }
+  }
+
+  &__item {
+    margin-right: $space_m;
+    border-radius: 5px;
+    font-size: $font-size_s;
+    font-weight: bold;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mq() {
+      margin-right: initial;
+      font-size: $font-size_l;
+    }
+  }
+
+  &__link {
+    color: $font-color_sub;
+    display: flex;
+    height: 3em;
+    align-items: center;
+    padding: 0 $space_m;
+    @include mq() {
+      justify-content: center;
+      color: $font-color_default;
+    }
+  }
+}

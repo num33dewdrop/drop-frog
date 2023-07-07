@@ -1,0 +1,13 @@
+.c-thrTitle {
+  font-weight: bold;
+  font-family: $font-family_corp;
+  font-size: $font-size_l;
+  @include mq() {
+    font-size: $font-size_default;
+  }
+
+  &--center {
+    text-align: center;
+    margin-bottom: $space_m;
+  }
+}

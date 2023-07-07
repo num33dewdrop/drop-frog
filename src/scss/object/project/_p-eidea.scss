@@ -1,0 +1,38 @@
+.p-eidea {
+  display: flex;
+  background: #fff;
+  border-radius: 3px;
+  border: .5px solid $border-color_default;
+  @include mq() {
+    display: block;
+  }
+
+  &__img {
+    width: 40%;
+    position: relative;
+    @include mq() {
+      width: inherit;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__detail {
+    font-size: $font-size_s;
+    padding: $space_l;
+    width: 60%;
+    @include mq() {
+      width: inherit;
+    }
+  }
+}

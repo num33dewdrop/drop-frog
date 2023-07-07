@@ -1,0 +1,74 @@
+.c-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    border-bottom: 3px solid rgba(188, 169, 172, 0.3);
+    @include mq() {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    width: fit-content;
+    letter-spacing: 0.1em;
+    margin: 5px auto;
+    line-height: 3em;
+    padding: 0 30px;
+    font-size: 12px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+    background: $bgColor_default;
+    @include hv() {
+      &:hover {
+        color: $color_sub;
+        transition: all .3s;
+      }
+    }
+    @include hv($hover: no) {
+      &:active {
+        color: $color_sub;
+        transition: all .3s;
+      }
+    }
+
+    &--msg {
+      background: #fff;
+
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f1d8";
+        margin-right: $space_m;
+        display: inline-block;
+      }
+
+      @include hv() {
+        &:hover {
+          &::before {
+            transform: translate(45px, -30px);
+            opacity: 0;
+            transition: all 1s ease .3s;
+          }
+        }
+      }
+      @include hv($hover: no) {
+        &:active {
+          &::before {
+            transform: translate(45px, -30px);
+            opacity: 0;
+            transition: all 1s ease .3s;
+          }
+        }
+      }
+    }
+  }
+}

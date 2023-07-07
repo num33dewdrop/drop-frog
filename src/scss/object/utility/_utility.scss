@@ -1,0 +1,74 @@
+.u-marginB-s {
+  margin-bottom: $space_s;
+}
+
+.u-marginB-m {
+  margin-bottom: $space_m;
+}
+
+.u-marginB-l {
+  margin-bottom: $space_l;
+}
+
+.u-marginB-xl {
+  margin-bottom: $space_xl;
+}
+
+.u-marginR-s {
+  margin-right: $space_s;
+}
+
+.u-marginR-m {
+  margin-right: $space_m;
+}
+
+.u-marginR-l {
+  margin-right: $space_l;
+}
+
+.u-marginR-xl {
+  margin-right: $space_xl;
+}
+
+.u-marginT-l {
+  margin-top: $space_l;
+}
+
+.u-marginL-xl {
+  margin-left: $space_xl;
+}
+
+.u-paddingT-l {
+  padding-top: $space_l;
+}
+
+.u-paddingB-l {
+  padding-bottom: $space_l;
+}
+
+.u-fontSize-s {
+  font-size: $font-size_s;
+}
+
+.u-fontSize-m {
+  font-size: $font-size_default;
+}
+
+.u-fontWeight-B {
+  font-weight: bold;
+}
+
+.u-align-R {
+  text-align: right;
+}
+
+.u-pre {
+  white-space: pre-line;
+}
+
+.u-brSp {
+  display: none;
+  @include mq() {
+    display: block;
+  }
+}

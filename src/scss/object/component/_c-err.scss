@@ -1,0 +1,5 @@
+.c-err {
+  & + input, & select, & + div input, & + textarea {
+    background: $bgColor_err !important;
+  }
+}

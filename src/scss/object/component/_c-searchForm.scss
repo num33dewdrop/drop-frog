@@ -1,0 +1,31 @@
+.c-searchForm {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: $font-size_s;
+  @include mq() {
+    border-radius: inherit;
+  }
+
+  &__queryField {
+    height: 3em;
+    flex-grow: 1;
+    border-left: 1px solid #dcd9d9;
+
+    & input[type="search"] {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__submit {
+    height: 3em;
+
+    & input[type="submit"] {
+      height: 100%;
+      padding-right: $space_m;
+    }
+  }
+}

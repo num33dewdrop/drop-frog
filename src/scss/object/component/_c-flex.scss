@@ -1,0 +1,28 @@
+.c-flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--alignCen {
+    align-items: center;
+  }
+
+  &--justCenter {
+    justify-content: center;
+  }
+
+  &--spaceBet {
+    justify-content: space-between;
+  }
+
+  &--spaceAro {
+    justify-content: space-around;
+  }
+
+  &--flexEnd {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}

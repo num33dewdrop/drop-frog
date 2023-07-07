@@ -1,0 +1,16 @@
+.c-subTitle {
+  font-size: $font-size_l;
+  font-weight: bold;
+  color: $color_corp;
+  margin-bottom: $space_l;
+  text-align: center;
+  font-family: $font-family_corp;
+
+  &--col2 {
+    text-align: left;
+  }
+
+  @include mq() {
+    font-size: $font-size_m;
+  }
+}

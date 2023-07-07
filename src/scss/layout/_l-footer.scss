@@ -1,0 +1,113 @@
+.l-footer {
+  padding: $space_l;
+  font-size: $font-size_s;
+  background: $bgColor_sub;
+  color: $font-color_sub;
+  margin-top: $space_section;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: $space_l $space_xl;
+    @include mq($breakpoint: md) {
+      display: block;
+      padding: 0;
+    }
+    @include mq() {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  &__left {
+    width: 33%;
+    margin-right: $space_l;
+    @include mq($breakpoint: md) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $space_l;
+    }
+    @include mq() {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $space_l;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: $font-color_sub;
+    font-family: $font-family_logo;
+    font-size: 50px;
+    @include mq() {
+      font-size: $font-size_l;
+    }
+  }
+
+  &__right {
+    width: 67%;
+    @include mq($breakpoint: md) {
+      width: 100%;
+      margin-bottom: $space_l;
+    }
+    @include mq() {
+      width: 100%;
+      margin-bottom: $space_l;
+    }
+  }
+
+  &__nav {
+    margin-bottom: $space_l;
+  }
+
+  &__list {
+    display: flex;
+    @include mq() {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    border-right: 1px solid #eee;
+    padding-right: $space_s;
+    margin-right: $space_s;
+
+    &:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    @include mq() {
+      border-right: none;
+      margin-right: 0;
+      margin-bottom: $space_s;
+      width: 50%;
+    }
+  }
+
+  &__link {
+    color: $font-color_sub;
+  }
+
+  &__msg {
+    width: 100%;
+    height: 150px;
+    background: $bgColor_default;
+    padding: $space_m;
+    border-radius: 3px;
+    color: $font-color_default;
+  }
+
+  &__copyright {
+    text-align: center;
+    white-space: nowrap;
+
+    & a {
+      color: $font-color_sub;
+    }
+  }
+}

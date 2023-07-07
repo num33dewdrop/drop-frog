@@ -1,0 +1,70 @@
+.c-container {
+  padding: $space_section 6vw;
+
+  &__col2 {
+    display: flex;
+    @include mq() {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
+  &__sidebar {
+    width: 20%;
+    margin-right: $space_l;
+    @include mq($breakpoint: md) {
+      width: 32%;
+    }
+    @include mq() {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__sideTitle {
+    font-weight: bold;
+    padding: $space_s $space_m;
+    border-bottom: 2px solid $border-color_default;
+    @include mq() {
+      font-size: $font-size_l;
+    }
+  }
+
+  &__main {
+    width: 80%;
+    @include mq($breakpoint: md) {
+      width: 68%;
+    }
+    @include mq() {
+      width: 100%;
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: $space_m;
+
+    &Left {
+      display: flex;
+      align-items: flex-end;
+      @include mq() {
+        display: block;
+      }
+    }
+  }
+
+  &__body {
+    &--middleSize {
+      width: 50%;
+      margin: 0 auto;
+      @include mq($breakpoint: md) {
+        width: 100%;
+      }
+      @include mq() {
+        width: 100%;
+      }
+    }
+  }
+}

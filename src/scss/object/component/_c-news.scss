@@ -1,0 +1,43 @@
+.c-news {
+  background: #fff;
+  padding: $space_m;
+  border-radius: 3px;
+  border: .5px solid $border-color_default;
+
+  &--scroll {
+    max-height: 325px;
+    overflow-y: scroll;
+  }
+
+  &__item {
+    margin-bottom: $space_m;
+    padding-bottom: $space_m;
+    border-bottom: 1px dashed $border-color_default;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__head {
+    font-size: $font-size_s;
+    margin-bottom: $space_s;
+  }
+
+  &__body {
+
+  }
+
+  &__name {
+    color: $color_corp;
+  }
+
+  &__msg {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

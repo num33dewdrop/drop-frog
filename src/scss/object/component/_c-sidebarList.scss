@@ -1,0 +1,37 @@
+.c-sidebarList {
+  padding-top: $space_m;
+  padding-bottom: $space_l;
+  margin: 0 $space_m;
+
+  &__item {
+    margin-bottom: $space_m;
+  }
+
+  &__link {
+    font-size: $font-size_s;
+    display: block;
+    @include mq() {
+      font-size: $font-size_default;
+    }
+
+    &--active {
+      font-weight: bold;
+    }
+  }
+
+  &__btn {
+    line-height: 3em;
+    text-align: center;
+    margin-top: 30px;
+    @include hv() {
+      &:hover {
+        color: $font-color_sub;
+      }
+    }
+    @include hv($hover: no) {
+      &:active {
+        color: $font-color_sub;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.c-authForm {
+  width: 40vw;
+  margin: 0 auto;
+  @include mq() {
+    width: 100%;
+  }
+
+  &__input {
+    height: 3em;
+    width: 100%;
+    margin-bottom: $space_l;
+    background: #fff;
+    border-radius: 3px;
+    border: .5px solid $border-color_default;
+  }
+
+  & label {
+    font-size: $font-size_s;
+  }
+
+  &__select {
+    background-color: #fff;
+    border: .5px solid $border-color_default;
+    height: 3em;
+    margin-bottom: $space_l;
+
+    & select {
+      height: 100%;
+      width: 100%;
+      padding: 0 $space_m;
+    }
+  }
+
+  &__textarea {
+    height: 150px;
+    background-color: #fff;
+    border: .5px solid $border-color_default;
+    width: 100%;
+  }
+
+  &__checkArea {
+    font-size: $font-size_s;
+  }
+
+  &__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mq() {
+      display: block;
+    }
+  }
+}

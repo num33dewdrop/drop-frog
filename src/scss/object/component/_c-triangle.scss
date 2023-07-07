@@ -1,0 +1,30 @@
+.c-triangle {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &--bottom {
+    justify-content: center;
+  }
+
+  &--right::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    margin: 0 $space_m;
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
+    border-top: 0.5em solid $font-color_default;
+    pointer-events: none;
+  }
+
+  &--bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
+    border-top: 0.5em solid $font-color_default;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,16 @@
+.c-areaMsg {
+  padding-left: $space_m;
+  color: $color_err;
+  font-size: $font-size_s;
+  white-space: nowrap;
+
+  &--common {
+    margin: $space_m 0;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  &--check {
+    margin: 0 0 $space_m 10px;
+  }
+}

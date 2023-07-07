@@ -1,0 +1,9 @@
+.l-main {
+  padding-top: 80px;
+  @include mq($breakpoint: md) {
+    padding-top: 96px;
+  }
+  @include mq() {
+    padding-top: 96px;
+  }
+}

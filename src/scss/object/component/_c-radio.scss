@@ -1,0 +1,67 @@
+.c-radio {
+  display: flex;
+  padding: $space_s 0;
+  font-size: $font-size_s;
+  @include hv() {
+    &:hover .c-radio__inner {
+      transform: scale(.5);
+      opacity: .5;
+    }
+  }
+  @include hv($hover: no) {
+    &:active .c-radio__inner {
+      transform: scale(.5);
+      opacity: .5;
+    }
+  }
+
+  &--spSidebar {
+    @include mq() {
+      font-size: $font-size_default;
+
+    }
+  }
+
+  &__inner {
+    transition: all .3s ease-in-out;
+    transform: scale(0);
+    width: 1em;
+    height: 1em;
+    display: block;
+    margin: .21em;
+    border-radius: 50%;
+    background-color: $color_sub;
+    opacity: 0;
+  }
+
+  &__outer {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: $space_m;
+    border: .5px solid $border-color_default;
+    border-radius: 50%;
+    background-color: #fff;
+    @include mq() {
+      margin-right: $space_s;
+    }
+  }
+
+  & input[type="radio"] {
+    display: none;
+
+    &:checked + .c-radio__outer .c-radio__inner {
+      transform: scale(.8);
+      opacity: 1;
+    }
+
+    &:checked + .c-radio__outer {
+      border: .5px solid $color_sub
+    }
+
+    &:focus + .c-radio__outer .c-radio__inner {
+      transform: scale(.8);
+      opacity: 1;
+    }
+  }
+}

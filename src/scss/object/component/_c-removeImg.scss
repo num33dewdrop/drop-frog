@@ -1,0 +1,18 @@
+.c-removeImg {
+  font-size: $font-size_s;
+  line-height: 3em;
+  background: $bgColor_btn2;
+  color: $font-color_sub;
+  width: 100%;
+  border: .5px solid $border-color_default;
+  @include hv() {
+    &:hover {
+      background: $color_err;
+    }
+  }
+  @include hv($hover: no) {
+    &:active {
+      background: $color_err;
+    }
+  }
+}

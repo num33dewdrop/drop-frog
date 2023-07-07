@@ -1,0 +1,11 @@
+.c-select {
+  width: 160px;
+  height: 3em;
+
+  & select {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 $space_m;
+  }
+}

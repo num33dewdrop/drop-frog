@@ -1,0 +1,22 @@
+.p-publicUser {
+  width: 50%;
+  margin: 0 auto;
+  @include mq() {
+    width: 100%;
+  }
+
+  &__detail {
+    margin-top: $space_l;
+    margin-bottom: $space_m;
+  }
+
+  &__text {
+    font-size: $font-size_s;
+    width: fit-content;
+    width: -moz-fit-content;
+
+    &--none {
+      margin: 0 auto;
+    }
+  }
+}

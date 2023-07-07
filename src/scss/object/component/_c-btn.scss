@@ -1,0 +1,54 @@
+.c-btn {
+  display: block;
+  height: 3em;
+  color: $font-color_sub;
+  font-weight: bold;
+  padding: 0 $space_l;
+  background: $bgColor_btn;
+  transition: .3s;
+  border-radius: 3px;
+  @include hv() {
+    &:hover {
+      background: $bgColor_btn--act;
+      transition: .3s;
+    }
+  }
+  @include hv($hover: no) {
+    &:active {
+      background: $bgColor_btn--act;
+      transition: .3s;
+    }
+  }
+
+  &--alert {
+    background: $bgColor_btn2;
+    @include hv() {
+      &:hover {
+        background: $color_err;
+        opacity: .8;
+      }
+    }
+    @include hv($hover: no) {
+      &:active {
+        background: $color_err;
+        opacity: .8;
+      }
+    }
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &--right {
+    margin-left: auto;
+  }
+
+  &--sp {
+    display: none;
+    @include mq() {
+      display: block;
+      font-size: $font-size_s;
+    }
+  }
+}

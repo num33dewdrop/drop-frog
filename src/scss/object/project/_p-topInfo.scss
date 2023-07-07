@@ -1,0 +1,32 @@
+.p-topInfo {
+  display: flex;
+  @include mq($breakpoint: md) {
+    display: block;
+  }
+  @include mq() {
+    display: block;
+  }
+
+  &__news {
+    width: calc(100% / 2 - #{$space_l} + #{$space_l} / 2);
+    margin-right: $space_l;
+    @include mq($breakpoint: md) {
+      width: 100%;
+      margin-bottom: $space_section;
+    }
+    @include mq() {
+      width: 100%;
+      margin-bottom: $space_section;
+    }
+  }
+
+  &__eidea {
+    width: calc(100% / 2 - #{$space_l} + #{$space_l} / 2);
+    @include mq($breakpoint: md) {
+      width: 100%;
+    }
+    @include mq() {
+      width: 100%;
+    }
+  }
+}

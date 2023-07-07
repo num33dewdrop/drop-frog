@@ -1,0 +1,8 @@
+.c-contentsNum {
+  font-size: $font-size_s;
+  margin-left: $space_m;
+  margin-bottom: $space_s;
+  @include mq() {
+    margin: 0;
+  }
+}
